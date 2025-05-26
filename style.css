@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+:root {
+    font-size: 62.5%;
+
+    --background-color: rgb(246, 246, 246);
+    --form-background-color: rgb(255, 255, 255);
+    --input-background-color: rgb(238, 255, 241);
+    --input-border-color: rgb(212, 255, 210);
+    --input-border-selected-color: rgb(0, 136, 0);
+    --button-background-color: rgb(176, 253, 154);
+}
+
+.hidden {
+    display: none !important;
+}
+
+body {
+    display: flex;
+    background: var(--background-color);
+
+    > main {
+        margin: 6rem auto;
+        display: flex;
+        flex-direction: column;
+        > h1 {
+            font-family: 'Lucida Sans', sans-serif;
+            font-size: 6rem;
+            margin: 0 auto 4rem;
+            color: rgb(9, 77, 23);
+        }
+        > form {
+            width: 50rem;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            background: var(--form-background-color);
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            border-radius: .8rem;
+            padding: 2rem;
+            gap: 2rem;
+            > h2 {
+                font-size: 2.5rem;
+                line-height: 0;
+                color: rgb(9, 77, 23);
+            }
+            > input, textarea, select, button {
+                font-size: 1.6rem;
+                font-family: Arial, sans-serif;
+                height: 5rem;
+                padding: 0 .7rem;
+                border-radius: .8rem;
+                background: var(--input-background-color);
+                border: solid .2rem var(--input-border-color);
+            }
+            > input:focus, textarea:focus, select:focus {
+                border: solid .2rem var(--input-border-selected-color);
+                outline: none;
+            }
+            > textarea {
+                padding: .7rem;
+            }
+            > button {
+                background: var(--button-background-color);
+                transition: .2s;
+            }
+            > button:hover {
+                background: rgb(175, 222, 162);
+                
+            }
+        }
+
+        > .list-container {
+            width: 50rem;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            background: var(--form-background-color);
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            border-radius: .8rem;
+            padding: 2rem;
+            gap: 2rem;
+            > .list-title {
+                display: flex;
+                justify-content: space-between;
+                h2 {
+                font-size: 2rem;
+                line-height: 0;
+                color: rgb(9, 77, 23);
+                }
+                button {
+                    width: 10rem;
+                }
+            }
+        }
+    }   
+}
+
+input, textarea, select, button {
+    font-size: 1.6rem;
+    font-family: Arial, sans-serif;
+    height: 5rem;
+    padding: 0 .7rem;
+    border-radius: .8rem;
+    background: var(--input-background-color);
+    border: solid .2rem var(--input-border-color);
+}
+
+button {
+    background: var(--button-background-color);
+    transition: .2s;
+}
+
+button:hover {
+     background: rgb(175, 222, 162);
+}
+
+table {
+    font-size: 2rem;
+    th {
+        font-size: 2.5rem;
+    }
+}
+

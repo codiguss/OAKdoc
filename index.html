@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAKdoc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>OAKdoc</h1>
+        
+        <form id="form" onsubmit="cadastrarProduto(event)">
+            <h2>Cadastrar Produto</h2>
+
+            <input 
+            type="text"
+            id="nome"
+            placeholder="Nome do produto" 
+            required
+            autocomplete="off">
+
+            <textarea 
+            id="descricao" 
+            placeholder="Descrição do produto"
+            autocomplete="off"></textarea>
+
+            <input 
+            type="number" 
+            id="valor" 
+            placeholder="Valor do produto" 
+            required
+            autocomplete="off">
+
+            <select id="disponivel">
+               <option value="sim">Disponível para venda?</option>
+               <option value="sim">Sim</option>
+               <option value="não">Não</option>
+            </select>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <div id="list" class="list-container hidden">
+            <div class="list-title">
+                <h2>Produtos Cadastrados</h2>
+                <button onclick="voltarFormulario()">Novo Produto</button>
+            </div>
+
+           <table id="tabelaProdutos">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th>Disponível</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              </tbody>
+           </table>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
